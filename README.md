@@ -69,8 +69,8 @@ Butuh JDK. Sudah diuji dengan JDK 22, tapi kode ini tidak memakai fitur baru jad
 Kelas ini memakai `package TBP`, tapi nama folder repo tidak harus `TBP`. Cukup arahkan hasil kompilasi ke folder `TBP` dengan opsi `-d .`, lalu jalankan dari folder repo.
 
 ```bash
-git clone https://github.com/KieranYui/sistem-penjualan-laptop.git
-cd sistem-penjualan-laptop
+git clone https://github.com/KieranYui/LaptopHub.git
+cd LaptopHub
 
 javac -d . Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop.java
 java -cp . TBP.Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop
@@ -90,7 +90,7 @@ Pengguna NetBeans cukup membuka project lalu tekan Run, karena kelas ini sudah p
 ## Struktur Berkas
 
 ```
-sistem-penjualan-laptop/
+LaptopHub/
 ├── README.md
 ├── .gitignore
 └── Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop.java
