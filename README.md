@@ -66,24 +66,23 @@ Estimasi biaya dihitung dengan rumus `(tarif x lama hari) + biaya part`.
 
 Butuh JDK. Sudah diuji dengan JDK 22, tapi kode ini tidak memakai fitur baru jadi JDK 17 ke atas aman.
 
-Kelas ini berada di dalam `package TBP`, jadi kompilasi harus dijalankan dari folder induknya, bukan dari dalam folder `TBP`.
+Kelas ini memakai `package TBP`, jadi nama folder tempat berkas ini berada harus `TBP`. Kalau repo di-clone, folder hasil clone sudah bernama `TBP`, jadi tidak perlu diubah apa-apa.
 
 ```bash
-# masuk ke folder induk
-cd semester-1
+git clone https://github.com/KieranYui/TBP.git
+cd TBP
 
-# kompilasi
-javac TBP/Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop.java
-
-# jalankan
-java -cp . TBP.Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop
+javac Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop.java
+java -cp .. TBP.Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop
 ```
+
+Bagian `-cp ..` perlu karena kelasnya berada di package `TBP`, sehingga classpath harus menunjuk ke folder induknya.
 
 Kalau `javac` tidak ada di PATH, pakai path lengkap JDK-nya:
 
 ```bash
-/path/ke/jdk/bin/javac TBP/Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop.java
-/path/ke/jdk/bin/java -cp . TBP.Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop
+/path/ke/jdk/bin/javac Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop.java
+/path/ke/jdk/bin/java -cp .. TBP.Sistem_Pelayanan_dan_Transaksi_Penjualan_Laptop
 ```
 
 Pengguna NetBeans cukup membuka project lalu tekan Run, karena kelas ini sudah punya `main`.
